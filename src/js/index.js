@@ -12,4 +12,3 @@ import Home from "./component/home.jsx";
 
 
 let pageRended = ReactDOM.createRoot(document.getElementById('app')).render(<Home/>);
-let intervalo = setInterval(pageRended,1000)
