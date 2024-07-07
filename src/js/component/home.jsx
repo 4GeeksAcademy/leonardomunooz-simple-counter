@@ -1,23 +1,27 @@
 import React from "react";
-import Counter from "./Counter.jsx"
-import PropTypes from "prop-types";
-import simple from "../simple.js";
-
+import Counter from "./Counter.jsx";
 //create your first component
-
 let seconds = 0;
 let counterMinutes = 0;
-let counterHours = 0
+let counterHours = 0;
 let counterDays = 0;
 
-setInterval(function(props) {
-	        console.log(seconds = seconds + 1);
-	          if(seconds == 60){
-	            counterMinutes = counterMinutes + 1 ;
-	            console.log("minutos: " + counterMinutes);
-	            seconds = 0;
-	        }
-	},1000);
+
+  seconds++;
+  if (seconds === 10) {
+    counterMinutes = counterMinutes + 1;
+    seconds = 0;
+  }
+  if (counterMinutes === 10) {
+    counterHours = counterHours + 1;
+    counterMinutes = 0;
+  }
+  if (counterHours === 10) {
+    counterDays = counterDays + 1;
+    counterHours = 0;
+  }
+  console.log(`${counterHours}:${counterMinutes}: ${seconds}`);
+
 
 const Home = () => {
 	return (
@@ -26,16 +30,16 @@ const Home = () => {
 				<Counter contenido={<i class="far fa-clock"></i>} />
 			</div>
 			<div className="container-cards p-4 w-auto h-50">
-				<Counter contenido={counterDays}  />
+				<Counter contenido={seconds} />
 			</div>
 			<div className="container-cards p-4 w-auto h-50">
-				<Counter contenido={counterHours} />
-			</div>
-			<div className="container-cards p-4  w-auto h-50">
 				<Counter contenido={counterMinutes} />
 			</div>
+			<div className="container-cards p-4  w-auto h-50">
+				<Counter contenido={counterHours} />
+			</div>
 			<div className="container-cards p-4 w-auto h-50">
-				<Counter contenido={seconds} />
+				<Counter contenido={counterDays} />
 			</div>
 		</div>
 	);

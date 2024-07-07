@@ -1,6 +1,5 @@
-import React from "react";
 import PropTypes from "prop-types";
-import { prototype } from "file-loader";
+import React from "react";
 
 const Counter = (props) => {
     return (
