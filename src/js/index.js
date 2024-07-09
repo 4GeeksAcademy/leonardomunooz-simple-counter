@@ -8,7 +8,6 @@ import "../styles/index.css";
 import Home from "./component/Home.jsx";
 
 // //render your react application
-
     let seconds = 0;
     let counterMinutes = 9;
     let counterHours = 9;
