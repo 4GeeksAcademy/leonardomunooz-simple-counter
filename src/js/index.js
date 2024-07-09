@@ -18,15 +18,15 @@ const root = ReactDOM.createRoot(document.querySelector('#app'));
 
 setInterval(() => {
     seconds++;
-    if (seconds === 10) { 
+    if (seconds === 60) { 
         counterMinutes = counterMinutes + 1;
         seconds = 0;
     }
-    if (counterMinutes === 10) {
+    if (counterMinutes === 60) {
         counterHours = counterHours + 1;
         counterMinutes = 0;
     }
-    if (counterHours === 10) {
+    if (counterHours === 24) {
         counterDays = counterDays + 1;
         counterHours = 0;
     }
