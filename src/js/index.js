@@ -9,11 +9,12 @@ import Home from "./component/Home.jsx";
 
 // //render your react application
     let seconds = 0;
-    let counterMinutes = 9;
-    let counterHours = 9;
+    let counterMinutes = 0;
+    let counterHours = 0;
     let counterDays = 0;
 
 const root = ReactDOM.createRoot(document.querySelector('#app'));
+
 
 setInterval(() => {
     seconds++;
